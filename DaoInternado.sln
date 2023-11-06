@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaoInternado", "DaoInternado\DaoInternado.csproj", "{3375FB92-1733-4566-A27F-6B3FB414C539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internado", "Internado\Internado.csproj", "{855644D3-2C43-4C0C-B29A-94ECB0767D48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3375FB92-1733-4566-A27F-6B3FB414C539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3375FB92-1733-4566-A27F-6B3FB414C539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3375FB92-1733-4566-A27F-6B3FB414C539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3375FB92-1733-4566-A27F-6B3FB414C539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{855644D3-2C43-4C0C-B29A-94ECB0767D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855644D3-2C43-4C0C-B29A-94ECB0767D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855644D3-2C43-4C0C-B29A-94ECB0767D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855644D3-2C43-4C0C-B29A-94ECB0767D48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C9179BE-4840-4AF8-8110-594E2FB1A307}
+	EndGlobalSection
+EndGlobal

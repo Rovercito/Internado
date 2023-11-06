@@ -1,0 +1,99 @@
+body {
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 570px;
+    height: 500px;
+    padding: 40px;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0);
+    border-radius: 10px;
+}
+
+.taskbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 570px;
+    height: 500px;
+    padding: 40px;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.user-box {
+    position: relative;
+}
+
+  /* Estilo personalizado para el panel */
+.comment-panel {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.txt{
+    border-radius: 10px;
+}
+
+/* Estilo personalizado para los botones */
+.btn-custom  {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Estilo personalizado para el botón de carga de archivos */
+.form-control-file {
+    padding: 8px 12px;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cambiar el color del texto del botón al seleccionar un archivo */
+.form-control-file:active,
+.form-control-file:focus,
+.form-control-file:hover {
+    background-color: #e9ecef;
+    color: #333;
+    border-color: #6c757d;
+}
+
+
+.btn-custom-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-custom-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+  
+  

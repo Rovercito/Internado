@@ -1,0 +1,78 @@
+C:\Users\Acer\Downloads\inter\DaoInternado\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\Acer\Downloads\inter\DaoInternado\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\Acer\Downloads\inter\DaoInternado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\Acer\Downloads\inter\DaoInternado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Downloads\inter\DaoInternado\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\Acer\Downloads\inter\DaoInternado\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\juane\source\repos\DaoInternado\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\juane\source\repos\DaoInternado\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\juane\source\repos\DaoInternado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\juane\source\repos\DaoInternado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\juane\source\repos\DaoInternado\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\juane\source\repos\DaoInternado\DaoInternado\obj\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\InternateBYjuan\Internado-Juan\Internado-Juan\DaoInternado\bin\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\InternateBYjuan\Internado-Juan\Internado-Juan\DaoInternado\bin\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\InternateBYjuan\Internado-Juan\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+D:\Proyecto de Sistemas I\InternateBYjuan\Internado-Juan\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+D:\Proyecto de Sistemas I\InternateBYjuan\Internado-Juan\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\InternateBYjuan\Internado-Juan\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\InternateBYjuan\PA\Internado-Juan\DaoInternado\bin\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\InternateBYjuan\PA\Internado-Juan\DaoInternado\bin\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\InternateBYjuan\PA\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+D:\Proyecto de Sistemas I\InternateBYjuan\PA\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+D:\Proyecto de Sistemas I\InternateBYjuan\PA\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\InternateBYjuan\PA\Internado-Juan\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistemas\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistemas\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistemas\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistemas\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistemas\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistemas\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\Internado\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\Internado\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\Acer\Documents\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\Internado\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\Internado\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyectos de sistema\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyectos de sistema\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyectos de sistema\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyectos de sistema\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyectos de sistema\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyectos de sistema\DaoInternado\obj\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\INTERNADO_TASK\Internado\DaoInternado\bin\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\INTERNADO_TASK\Internado\DaoInternado\bin\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\INTERNADO_TASK\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+D:\Proyecto de Sistemas I\INTERNADO_TASK\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+D:\Proyecto de Sistemas I\INTERNADO_TASK\Internado\DaoInternado\obj\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\INTERNADO_TASK\Internado\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistema\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistema\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistema\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistema\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistema\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\proyecto de sistema\DaoInternado\obj\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\Spreen3\Internado\DaoInternado\bin\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\Spreen3\Internado\DaoInternado\bin\Debug\DaoInternado.pdb
+D:\Proyecto de Sistemas I\Spreen3\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+D:\Proyecto de Sistemas I\Spreen3\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+D:\Proyecto de Sistemas I\Spreen3\Internado\DaoInternado\obj\Debug\DaoInternado.dll
+D:\Proyecto de Sistemas I\Spreen3\Internado\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\Proyecto internado\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\Proyecto internado\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\Proyecto internado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\Proyecto internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\Proyecto internado\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\juane\OneDrive\Documentos\Visual Studio 2022\Proyecto internado\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\juane\Source\Repos\Internado\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\juane\Source\Repos\Internado\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\juane\Source\Repos\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\juane\Source\Repos\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\juane\Source\Repos\Internado\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\juane\Source\Repos\Internado\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.pdb

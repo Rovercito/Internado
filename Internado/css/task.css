@@ -1,0 +1,11 @@
+.container-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D6A8A8; 
+    background-color: white; /* Color de fondo del formulario */
+    padding: 20px; /* Espacio interno dentro del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
+}
