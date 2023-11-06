@@ -41,9 +41,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Hospital/IndexHospital.aspx">Administrar <br /> Hospitales</a>
                             </li>
-                           <%-- <li class="nav-item">
-                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Reporte/ReportDoctor.aspx">Reportes<br /> -- </a>
-                            </li>--%>
+                           
                         </ul>
                     </div>
                     <div class="user-profile" style="position: relative; top: 20px; right: 20px;">
@@ -63,7 +61,7 @@
             </nav>
         </header>
         <div>
-            <div class="container-fluid">
+            <div class="container-fluid"  style="background-image: url('/Imagen/img_Univalle.jpeg'); background-size: cover; background-position: center;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
@@ -72,9 +70,6 @@
 
     </form>
 
-    <div>
-        <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Hospital/IndexHospital.aspx">Administrar <br /> Hospitales</a>
-    </div>
     <style>
         .white-menu {
             background-color: transparent;

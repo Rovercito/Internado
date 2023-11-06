@@ -76,3 +76,9 @@ C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.
 C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.dll
 C:\Users\Acer\Documents\A pruebas\Internado\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\Interna2\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\Interna2\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.pdb

@@ -60,7 +60,7 @@ namespace Internado
                 for (int i = 0; i < GridData.Rows.Count; i++)
                 {
                     string id = dt.Rows[i][0].ToString();
-                    string up = " <a class='btn btn-sm btn-info' href='EditStudent.aspx?id=" + id + "&type=U'> <i class='fas fa-edit' style='color:#000000;'> </i> Editar </a> ";
+                    string up = " <a class='btn btn-sm btn-warning' href='EditStudent.aspx?id=" + id + "&type=U'> <i class='fas fa-edit' style='color:#000000;'> </i> Editar </a> ";
                     string del = " <a class='btn btn-sm btn-danger' href='DeleteStudent.aspx?id=" + id + "&type=D'> <i class='fas fa-trash' style='background:#FF0000;'> </i> Eliminar </a>  ";
 
                     GridData.Rows[i].Cells[8].Text = up;
@@ -74,7 +74,19 @@ namespace Internado
             }
         }
 
+        protected void btnCrearInterno_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Students/CreateStudent.aspx");
+        }
 
+        protected void btnVerTareaInterno_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Students/ViewStatusStudent.aspx");
+        }
 
+        protected void btnReporteInterno_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Reporte/ReportStudent.aspx");
+        }
     }
 }

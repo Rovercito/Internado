@@ -14,6 +14,9 @@
                 <asp:ListItem Text="Filtrar Tareas" Value="0" />
             </asp:DropDownList>
         </div>
+        <div class="col-md-2">
+            <asp:Button runat="server" ID="BtnDescargarReporte" Text="Descargar Reporte" CssClass="btn btn-warning" OnClick="BtnDescargarReporte_Click"/>
+        </div>
     </div>
 
     <br />

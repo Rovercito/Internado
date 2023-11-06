@@ -430,5 +430,35 @@ namespace DaoInternado.Implementation
                 throw ex;
             }
         }   
+
+        public DataTable selectbyName(string name)
+        {
+            query = @"SELECT MAX(ts.idTaskStudent) AS idTaskStudent, MAX(s.name) AS 'Estudiante Asignado',
+                       MAX(ts.description) AS Descripcion, MAX(ts.statusTask) AS 'Estado Tarea', 
+                       MAX(d.name) AS 'Doctor Asignado', MAX(h.name) AS 'Hospital Asignado', 
+                       SUM(CASE WHEN ts.statusTask = 'Terminada' THEN 1 ELSE 0 END) AS 'Tareas Terminadas' 
+                       FROM taskStudent AS ts
+                       INNER JOIN Person d ON ts.idDoctor = d.idPerson
+                       INNER JOIN Person s ON ts.idStudent = s.idPerson
+                       INNER JOIN Student st ON st.idStudent = s.idPerson
+                       INNER JOIN Hospital h ON st.idHospital = h.idHospital
+                       WHERE s.name = @name
+                       GROUP BY s.idPerson 
+                       ORDER BY 2";
+
+            // WHERE s.name LIKE @name + '%' "" +
+
+            SqlCommand commnad = CreateBasicCommand(query);
+            commnad.Parameters.AddWithValue ("@name", name);
+
+            try
+            {
+                return ExecuteDataTableCommand(commnad);
+
+            }catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

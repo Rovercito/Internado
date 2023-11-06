@@ -24,6 +24,15 @@ namespace Internado.Doctor
         protected global::System.Web.UI.WebControls.Button btnCrearDoctor;
 
         /// <summary>
+        /// Control BtnReporteDoctor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnReporteDoctor;
+
+        /// <summary>
         /// Control gbDatos.
         /// </summary>
         /// <remarks>

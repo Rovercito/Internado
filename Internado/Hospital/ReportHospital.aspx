@@ -2,13 +2,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>REPORTE</h1>
 
-    <div>
-        <asp:DropDownList runat="server" ID="ddlFilterHospital" AppendDataBoundItems="false" AutoPostBack="true"  CssClass="form-control" OnSelectedIndexChanged="ddlFilterHospital_SelectedIndexChanged">
-            
-        </asp:DropDownList>
+    <center>
+        <h1>Reporte</h1>
+    </center>
+
+    <div class="row">
+        <%--<div class="col-md-2">
+           <asp:Label runat="server" Text="Hospital" />
+        </div> --%>
+        <div class="col-md-2">
+            <asp:DropDownList runat="server" ID="ddlFilterHospital" AppendDataBoundItems="false" AutoPostBack="true"  CssClass="form-control" OnSelectedIndexChanged="ddlFilterHospital_SelectedIndexChanged">
+    
+            </asp:DropDownList>
+        </div>
+        <div class="col-md-2">
+             <asp:Button runat="server" ID="btnDescargarReporte" Text="Descargar Reporte" CssClass="btn btn-warning" OnClick="btnDescargarReporte_Click"/>
+        </div>
     </div>
+    
+    
     <div>
         <asp:GridView runat="server" ID="gvReportHospital" CssClass="table" class="table table-dark" DataKeyName="ID"></asp:GridView>
     </div>

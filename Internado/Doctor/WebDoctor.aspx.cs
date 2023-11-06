@@ -77,5 +77,10 @@ namespace Internado.Doctor
         {
             Response.Redirect("/Doctor/CreateDoctor.aspx");
         }
+
+        protected void BtnReporteDoctor_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Reporte/ReportDoctor.aspx");
+        }
     }
 }

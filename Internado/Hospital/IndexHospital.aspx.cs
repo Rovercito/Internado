@@ -63,8 +63,8 @@ namespace Internado.Hospital
                 for (int i = 0; i < GridDataHospital.Rows.Count; i++)
                 {
                     string id = dt.Rows[i][0].ToString();
-                    string up = " <a class='btn btn-sm btn-info' style='width:75px; height:30px;' href='/Hospital/EditHospital.aspx?id=" + id + "&type=U'> <i class='fas fa-edit' style='color:#000000;'> </i> Editar  </a> ";
-                    string del = " <a class='btn btn-sm btn-danger' style='width:75px; height:30px;' href='/Hospital/IndexHospital.aspx?id=" + id + "&type=D'> <i class='fas fa-trash' style='background:#FF0000;'> </i> Eliminar </a>  ";
+                    string up = " <a class='btn btn-sm btn-warning' style='width:75px; height:30px;' href='/Hospital/EditHospital.aspx?id=" + id + "&type=U'> <i class='fas fa-edit' style='color:#000000;'> </i> Editar  </a> ";
+                    string del = " <a class='btn btn-sm btn-danger' style='width:75px; height:30px;' href='/Hospital/IndexHospital.aspx?id=" + id + "&type=D'> <i class='fas fa-trash' style='background:#FF0000;'> </i> Eliminarook </a>  ";
 
                     GridDataHospital.Rows[i].Cells[6].Text = up;
                     GridDataHospital.Rows[i].Cells[7].Text = del;
@@ -144,6 +144,16 @@ namespace Internado.Hospital
             {
                 throw ex;
             }
+        }
+
+        protected void btnCrearHospital_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Hospital/CreateHospital.aspx");
+        }
+
+        protected void BtnReporte_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Hospital/ReportHospital.aspx");
         }
     }
 }

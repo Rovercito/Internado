@@ -15,6 +15,24 @@ namespace Internado.Hospital
     {
 
         /// <summary>
+        /// Control btnCrearHospital.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCrearHospital;
+
+        /// <summary>
+        /// Control BtnReporte.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnReporte;
+
+        /// <summary>
         /// Control GridDataHospital.
         /// </summary>
         /// <remarks>
