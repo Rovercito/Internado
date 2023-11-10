@@ -49,6 +49,11 @@ namespace Internado.DoctorPage
                 taskStudentImpl = new TaskStudentImpl();
 
                 int n = taskStudentImpl.Insert(taskStudent);
+                
+                
+                //taskStudentImpl.Send(selectStudent, txtAssingDate.Text, txtAssingDateExpired.Text);
+                
+
 
                 if (n > 0)
                 {

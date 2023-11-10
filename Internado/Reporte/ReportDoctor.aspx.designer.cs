@@ -33,13 +33,22 @@ namespace Internado.Reporte
         protected global::System.Web.UI.WebControls.DropDownList ddlDoctor;
 
         /// <summary>
-        /// Control BtnDescargarReporte.
+        /// Control ddlDescargarPdf.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDescargarReporte;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDescargarPdf;
+
+        /// <summary>
+        /// Control ddlDescargarExcel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDescargarExcel;
 
         /// <summary>
         /// Control LiteralTable.

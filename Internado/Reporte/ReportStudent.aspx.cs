@@ -11,6 +11,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ClosedXML.Excel;
 
 namespace Internado.Reporte
 {
@@ -141,6 +142,62 @@ namespace Internado.Reporte
             Response.End();
         }
 
+        void exporteReportByEXCEL()
+        {
+            //string selectedDoctor = ddlDoctor.SelectedItem.ToString();
+            DataTable dt = implTask.ReportStudent();
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                var ws = wb.Worksheets.Add("Reporte Doctor");
+
+                ws.Cell(1, 1).Value = "Informe de Doctores";
+                ws.Cell(1, 1).Style.Font.Bold = true;
+                ws.Cell(1, 1).Style.Font.FontSize = 15;
+                ws.Range("A1:G1").Merge();
+                ws.Cell(1, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(2, 1).Value = "Fecha: " + DateTime.Now.ToString();
+                ws.Cell(2, 1).Style.Font.Bold = true;
+                ws.Cell(2, 1).Style.Font.FontSize = 12;
+                ws.Range("A2:G2").Merge();
+                ws.Cell(2, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(4, 1).Value = "Nº";
+                ws.Cell(4, 1).Style.Fill.BackgroundColor = XLColor.FromHtml("#808080");
+                ws.Cell(4, 1).Style.Font.Bold = true;
+                ws.Cell(4, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+
+                for (int i = 2; i <= dt.Columns.Count; i++)
+                {
+                    ws.Cell(4, i).Value = dt.Columns[i - 2].ColumnName;
+                    ws.Cell(4, i).Style.Fill.BackgroundColor = XLColor.FromHtml("#808080");
+                    ws.Cell(4, i).Style.Font.Bold = true;
+                    ws.Cell(4, i).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                }
+
+                // Agregar datos
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ws.Cell(i + 6, 1).Value = i + 1;
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        ws.Cell(i + 6, j + 2).Value = dt.Rows[i][j].ToString();
+                    }
+                }
+
+                MemoryStream ms = new MemoryStream();
+                wb.SaveAs(ms);
+
+                Response.Clear();
+                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                Response.AddHeader("content-disposition", "attachment;filename=ReporteDoctor.xlsx");
+                ms.WriteTo(Response.OutputStream);
+                Response.End();
+            }
+        }
+
         void selectbyName(string name)
         {
             try
@@ -189,13 +246,16 @@ namespace Internado.Reporte
             {
                 select();
             }
-
-            //selectbyName(name);
         }
 
         protected void btnDescargarReporteInterno_Click(object sender, EventArgs e)
         {
             exportReportbyPDF();
+        }
+
+        protected void btnDescargarReporteInternoExcel_Click(object sender, EventArgs e)
+        {
+            exporteReportByEXCEL();
         }
     }
 }

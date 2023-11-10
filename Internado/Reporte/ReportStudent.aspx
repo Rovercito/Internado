@@ -16,10 +16,13 @@
              <asp:Button runat="server" ID="btnSearch" Text="Buscar" CssClass="btn btn-info" OnClick="btnSearch_Click"/>
         </div>
         <div class="col-md-2">
-             <asp:Button runat="server" ID="btnDescargarReporteInterno" Text="Descargar Reporte" CssClass="btn btn-warning" OnClick="btnDescargarReporteInterno_Click" />
+             <asp:Button runat="server" ID="btnDescargarReporteInterno" Text="Descargar Reporte Pdf" CssClass="btn btn-warning" OnClick="btnDescargarReporteInterno_Click" />
+        </div>
+        <div class="col-md-2">
+            <asp:Button runat="server" ID="btnDescargarReporteInternoExcel" Text="Descargar Reporte Excel" CssClass="btn btn-warning" OnClick="btnDescargarReporteInternoExcel_Click" />
         </div>
     </div>
-
+    <br/>
 
      <asp:GridView ID="gbDatos" runat="server" CssClass="table"> </asp:GridView>
 

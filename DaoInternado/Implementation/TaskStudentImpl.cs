@@ -5,9 +5,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using System.Xml.Linq;
 
 namespace DaoInternado.Implementation
 {
@@ -129,42 +132,6 @@ namespace DaoInternado.Implementation
 
         }
 
-
-        /*public TaskStudent Get(int id)
-        {
-            TaskStudent t= null;
-            query = @"  SELECT ts.idTaskStudent,ts.description,ts.date,ts.expireDate,ts.statusTask,
-                        d.name,s.name
-                        FROM taskStudent ts
-                        INNER JOIN Person d ON ts.idDoctor = d.idPerson
-                        INNER JOIN Person s ON ts.idStudent = s.idPerson
-                        WHERE ts.idTaskStudent=@id";
-            SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@id", id);
-
-            try
-            {
-                DataTable table = ExecuteDataTableCommand(command);
-                if (table.Rows.Count > 0)
-                {
-                    t = new TaskStudent(int.Parse(table.Rows[0][0].ToString()), table.Rows[0][1].ToString(), 
-                        DateTime.Parse(table.Rows[0][2].ToString()),DateTime.Parse(table.Rows[0][3].ToString()),
-                        //table.Rows[0][4] != DBNull.Value ? (byte[])table.Rows[0][4] : null,
-                        //table.Rows[0][5] != DBNull.Value ? (byte[])table.Rows[0][5] : null,
-                        //table.Rows[0][4].ToString(), table.Rows[0][5].ToString(),
-                        //(byte[])table.Rows[0][4], (byte[])table.Rows[0][5],
-                        table.Rows[0][4].ToString(),
-                        int.Parse(table.Rows[0][5].ToString()), 
-                        int.Parse(table.Rows[0][6].ToString()));
-                }
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            return t;
-        }*/
 
         public int Insert(TaskStudent t)
         {
@@ -459,6 +426,30 @@ namespace DaoInternado.Implementation
             {
                 throw ex;
             }
+        }
+
+        public DataTable searchByDate(DateTime inicio, DateTime fin)
+        {
+            query = @"SELECT ts.idTaskStudent, ts.description AS Descripcion,ts.date AS Fecha,ts.expireDate AS 'Fecha de Expiracion',ts.image AS Imagen,ts.fileStudent AS Archivo,
+                        ts.statusTask AS 'Estado Tarea',d.name AS 'Doctor Asignado',s.name AS 'Estudiante Asignado'
+                        FROM taskStudent AS ts
+                        INNER JOIN Person AS d ON ts.idDoctor = d.idPerson
+                        INNER JOIN Person AS s ON ts.idStudent = s.idPerson
+						WHERE ts.date >= @inicio and ts.expireDate <= @fin
+						ORDER BY 2";
+
+            SqlCommand commnad = CreateBasicCommand(query);
+            commnad.Parameters.AddWithValue("@inicio", inicio);
+            commnad.Parameters.AddWithValue("@fin", fin);
+
+            try
+            {
+                return ExecuteDataTableCommand(commnad);
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+
         }
     }
 }

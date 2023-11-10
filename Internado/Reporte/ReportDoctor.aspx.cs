@@ -13,6 +13,11 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
+using System.Drawing;
+using System.IO;
+using System.Web;
+using ClosedXML.Excel;
+
 
 namespace Internado.Reporte
 {
@@ -163,6 +168,7 @@ namespace Internado.Reporte
             }
         }
 
+        //Reporte General Doctor pdf
         void exportReportToPDF()
         {
             DataTable dt = report.reportDoctor();
@@ -238,6 +244,202 @@ namespace Internado.Reporte
 
         }
 
+        //Reporte Por nombre Doctor Pdf
+        void exportReportToPdfByName()
+        {
+            string selectedDoctor = ddlDoctor.SelectedItem.ToString();
+            DataTable dt = report.reportDoctorbyName(selectedDoctor);
+
+            Document doc = new Document();
+            MemoryStream ms = new MemoryStream();
+            PdfWriter writer = PdfWriter.GetInstance(doc, ms);
+            doc.Open();
+
+
+            PdfPTable pdfTable = new PdfPTable(dt.Columns.Count);
+
+            pdfTable.DefaultCell.Border = PdfPCell.BOX;
+            pdfTable.DefaultCell.BorderColor = BaseColor.GRAY;
+            pdfTable.DefaultCell.BackgroundColor = new BaseColor(230, 230, 230);
+            pdfTable.DefaultCell.Padding = 5;
+            pdfTable.WidthPercentage = 100;
+            pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
+
+            BaseFont customFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.EMBEDDED);
+            iTextSharp.text.Font customTitleFont = new iTextSharp.text.Font(customFont, 15, iTextSharp.text.Font.BOLD, BaseColor.DARK_GRAY);
+
+            PdfPCell headerCell;
+
+
+            foreach (DataColumn column in dt.Columns)
+            {
+
+                headerCell = new PdfPCell(new Phrase(column.ColumnName, customTitleFont));
+                headerCell.BackgroundColor = new BaseColor(51, 153, 255);
+                headerCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                pdfTable.AddCell(headerCell);
+
+            }
+
+            Paragraph titleParagraph = new Paragraph("Informe de Doctores", customTitleFont);
+            titleParagraph.Alignment = Element.ALIGN_CENTER;
+            doc.Add(titleParagraph);
+
+            Paragraph dateParagraph = new Paragraph("Fecha: " + DateTime.Now.ToString(), customTitleFont);
+            dateParagraph.Alignment = Element.ALIGN_CENTER;
+            doc.Add(dateParagraph);
+
+            Paragraph emptySpace = new Paragraph(" ");
+            emptySpace.SpacingBefore = 20f;
+            doc.Add(emptySpace);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (object item in row.ItemArray)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase(item.ToString()));
+                    pdfTable.AddCell(cell);
+
+                }
+            }
+
+            doc.Add(pdfTable);
+            doc.Close();
+
+            //descargar
+            Response.ContentType = "prueba/pdf";
+            Response.AddHeader("content-disposition", "attachment;filename=Reporte Doctor.pdf");
+            Response.BinaryWrite(ms.ToArray());
+            Response.End();
+        }
+
+
+        //Reporte General Doctor Excel
+        void exportReportToExcel()
+        {
+            string selectedDoctor = ddlDoctor.SelectedItem.ToString();
+            DataTable dt = report.reportDoctor();
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                var ws = wb.Worksheets.Add("Reporte Doctor");
+
+                ws.Cell(1, 1).Value = "Informe de Doctores";
+                ws.Cell(1, 1).Style.Font.Bold = true;
+                ws.Cell(1, 1).Style.Font.FontSize = 15;
+                ws.Range("A1:G1").Merge();
+                ws.Cell(1, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(2, 1).Value = "Nombre Doctor: "+ selectedDoctor;
+                ws.Cell(2, 1).Style.Font.Bold = true;
+                ws.Cell(2, 1).Style.Font.FontSize = 15;
+                ws.Range("A2:G2").Merge();
+                ws.Cell(2, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(3, 1).Value = "Fecha: " + DateTime.Now.ToString();
+                ws.Cell(3, 1).Style.Font.Bold = true;
+                ws.Cell(3, 1).Style.Font.FontSize = 12;
+                ws.Range("A3:G3").Merge();
+                ws.Cell(3, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(5, 1).Value = "Nº";
+                ws.Cell(5, 1).Style.Fill.BackgroundColor = XLColor.FromHtml("#808080");
+                ws.Cell(5, 1).Style.Font.Bold = true;
+                ws.Cell(5, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+
+                for (int i = 2; i <= dt.Columns.Count; i++)
+                {
+                    ws.Cell(5, i).Value = dt.Columns[i - 2].ColumnName;
+                    ws.Cell(5, i).Style.Fill.BackgroundColor = XLColor.FromHtml("#808080");
+                    ws.Cell(5, i).Style.Font.Bold = true;
+                    ws.Cell(5, i).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                }
+
+               
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ws.Cell(i + 6, 1).Value = i + 1;
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        ws.Cell(i + 6, j + 2).Value = dt.Rows[i][j].ToString();
+                    }
+                }
+
+                MemoryStream ms = new MemoryStream();
+                wb.SaveAs(ms);
+
+                Response.Clear();
+                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                Response.AddHeader("content-disposition", "attachment;filename=ReporteDoctor.xlsx");
+                ms.WriteTo(Response.OutputStream);
+                Response.End();
+            }
+        }
+
+        //Reporte por nombre Doctor Excel
+        void exportReportToExcelByName()
+        {
+            string selectedDoctor = ddlDoctor.SelectedItem.ToString();
+            DataTable dt = report.reportDoctorbyName(selectedDoctor);
+            ////DataTable dt = report.reportDoctor();
+
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                var ws = wb.Worksheets.Add("Reporte Doctor");
+
+                ws.Cell(1, 1).Value = "Informe de Doctores";
+                ws.Cell(1, 1).Style.Font.Bold = true;
+                ws.Cell(1, 1).Style.Font.FontSize = 15;
+                ws.Range("A1:G1").Merge();
+                ws.Cell(1, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(2, 1).Value = "Nombre Doctor: " + selectedDoctor;
+                ws.Cell(2, 1).Style.Font.Bold = true;
+                ws.Cell(2, 1).Style.Font.FontSize = 15;
+                ws.Range("A2:G2").Merge();
+                ws.Cell(2, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(3, 1).Value = "Fecha: " + DateTime.Now.ToString();
+                ws.Cell(3, 1).Style.Font.Bold = true;
+                ws.Cell(3, 1).Style.Font.FontSize = 12;
+                ws.Range("A3:G3").Merge();
+                ws.Cell(3, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+                ws.Cell(5, 1).Value = "Nº";
+                ws.Cell(5, 1).Style.Fill.BackgroundColor = XLColor.FromHtml("#808080");
+                ws.Cell(5, 1).Style.Font.Bold = true;
+                ws.Cell(5, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+
+
+                for (int i = 2; i <= dt.Columns.Count; i++)
+                {
+                    ws.Cell(5, i).Value = dt.Columns[i - 2].ColumnName;
+                    ws.Cell(5, i).Style.Fill.BackgroundColor = XLColor.FromHtml("#808080");
+                    ws.Cell(5, i).Style.Font.Bold = true;
+                    ws.Cell(5, i).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
+                }
+
+                // Agregar datos
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ws.Cell(i + 6, 1).Value = i + 1;
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        ws.Cell(i + 6, j + 2).Value = dt.Rows[i][j].ToString();
+                    }
+                }
+
+                MemoryStream ms = new MemoryStream();
+                wb.SaveAs(ms);
+
+                Response.Clear();
+                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                Response.AddHeader("content-disposition", "attachment;filename=ReporteDoctor.xlsx");
+                ms.WriteTo(Response.OutputStream);
+                Response.End();
+            }
+        }
 
         protected void ddlDoctor_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -246,9 +448,36 @@ namespace Internado.Reporte
             loadReportbyNameDoctor();
         }
 
-        protected void BtnDescargarReporte_Click(object sender, EventArgs e)
+        //protected void BtnDescargarReporte_Click(object sender, EventArgs e)
+        //{
+        //    //exportReportToPDF();
+        //    //exportReportToExcel();
+        //}
+
+        protected void ddlDescargarPdf_SelectedIndexChanged(object sender, EventArgs e)
         {
-            exportReportToPDF();
+
+            if (ddlDescargarPdf.SelectedItem.Text == "Descarga General")
+            {
+                exportReportToPDF();
+                ddlDescargarPdf.SelectedValue = "Descargar Pdf";
+            }
+            else
+            {
+                exportReportToPdfByName();
+            }
+        }
+
+        protected void ddlDescargarExcel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ddlDescargarExcel.SelectedItem.Text == "Descarga General")
+            {
+                exportReportToExcel();
+            }
+            else
+            {
+                exportReportToExcelByName();
+            }
         }
     }
 }

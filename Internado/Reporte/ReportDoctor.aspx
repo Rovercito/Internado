@@ -14,9 +14,25 @@
                 <asp:ListItem Text="Filtrar Tareas" Value="0" />
             </asp:DropDownList>
         </div>
-        <div class="col-md-2">
+        <%--<div class="col-md-2">
             <asp:Button runat="server" ID="BtnDescargarReporte" Text="Descargar Reporte" CssClass="btn btn-warning" OnClick="BtnDescargarReporte_Click"/>
+        </div>--%>
+        <div class="col-md-2">
+            <asp:DropDownList ID="ddlDescargarPdf" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlDescargarPdf_SelectedIndexChanged">
+                <asp:ListItem Text="Descargar Pdf" Value="0" />
+                <asp:ListItem Text="Descarga General" Value="1" />
+                <asp:ListItem Text="Descargar Por Nombre" Value="2" />
+            </asp:DropDownList>
         </div>
+        <div class="col-md-2">
+            <asp:DropDownList ID="ddlDescargarExcel" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlDescargarExcel_SelectedIndexChanged">
+                <asp:ListItem Text="Descargar Excel" Value="0" />
+                <asp:ListItem Text="Descarga General" Value="1" />
+                <asp:ListItem Text="Descargar Por Nombre" Value="2" />
+            </asp:DropDownList>
+        </div>
+        
+    
     </div>
 
     <br />
