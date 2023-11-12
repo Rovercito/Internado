@@ -11,7 +11,7 @@ namespace Internado.Hospital
 {
 
 
-    public partial class EditHospital
+    public partial class DeleteHospital
     {
 
         /// <summary>
@@ -141,12 +141,12 @@ namespace Internado.Hospital
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
 
         /// <summary>
-        /// Control btnUpdate.
+        /// Control btnDelete.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
     }
 }

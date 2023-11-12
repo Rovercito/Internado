@@ -24,7 +24,7 @@
     </div>
     <br/>
 
-     <asp:GridView ID="gbDatos" runat="server" CssClass="table"> </asp:GridView>
+     <asp:GridView ID="gbDatos" runat="server" CssClass="table" HeaderStyle-BackColor="#b5b5b5" BackColor="#dcdbdc"> </asp:GridView>
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">

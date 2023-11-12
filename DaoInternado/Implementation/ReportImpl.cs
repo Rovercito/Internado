@@ -47,7 +47,7 @@ namespace DaoInternado.Implementation
                             LEFT JOIN Hospital H ON D.idHospital = H.idHospital
                             LEFT JOIN TaskStudent TS ON S.idStudent = TS.idStudent
                             WHERE P.name = @nameDoctor
-                            GROUP BY P.name, P1.name, H.name, TS.statusTas, TkS.description, TS.image, TS.fileStudent";
+                            GROUP BY P.name, P1.name, H.name, TS.statusTask, TS.description, TS.image, TS.fileStudent";
 
 
             SqlCommand command = CreateBasicCommand(query);

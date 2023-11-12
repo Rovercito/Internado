@@ -149,7 +149,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ChangePassword.aspx" />
+    <Content Include="Hospital\DeleteHospital.aspx" />
+    <Content Include="OptionsFromMenu\ChangePassword.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DoctorPage\DoctorAssingTask.aspx" />
     <Content Include="DoctorPage\DoctorPage.aspx" />
@@ -160,7 +161,7 @@
     <Content Include="Doctor\DeleteDoctor.aspx" />
     <Content Include="Doctor\EditDoctor.aspx" />
     <Content Include="Doctor\WebDoctor.aspx" />
-    <Content Include="ForgetPassword.aspx" />
+    <Content Include="OptionsFromMenu\ForgetPassword.aspx" />
     <Content Include="Hospital\CreateHospital.aspx" />
     <Content Include="Hospital\EditHospital.aspx" />
     <Content Include="Hospital\IndexHospital.aspx" />
@@ -189,11 +190,18 @@
     <Compile Include="AdminSite.Master.designer.cs">
       <DependentUpon>AdminSite.Master</DependentUpon>
     </Compile>
-    <Compile Include="ChangePassword.aspx.cs">
+    <Compile Include="Hospital\DeleteHospital.aspx.cs">
+      <DependentUpon>DeleteHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hospital\DeleteHospital.aspx.designer.cs">
+      <DependentUpon>DeleteHospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsFromMenu\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ChangePassword.aspx.designer.cs">
+    <Compile Include="OptionsFromMenu\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -266,11 +274,11 @@
     <Compile Include="Doctor\WebDoctor.aspx.designer.cs">
       <DependentUpon>WebDoctor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPassword.aspx.cs">
+    <Compile Include="OptionsFromMenu\ForgetPassword.aspx.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ForgetPassword.aspx.designer.cs">
+    <Compile Include="OptionsFromMenu\ForgetPassword.aspx.designer.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hospital\CreateHospital.aspx.cs">

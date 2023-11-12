@@ -47,7 +47,24 @@ namespace Internado.Hospital
 
                 if ( hospital > 0)
                 {
-                    Response.Redirect("/Hospital/IndexHospital.aspx");
+                    //Response.Redirect("/Hospital/IndexHospital.aspx");
+
+                    ScriptManager.RegisterStartupScript(this, GetType(), "success", @"Swal.fire({
+                                                                    icon: 'success',
+                                                                    title: '¡Registro Exitoso!',
+                                                                    showConfirmButton: false,
+                                                                    timer: 1500
+                                                                  }).then(() => {
+                                                                    window.location.href = '/Hospital/IndexHospital.aspx';
+                                                                  });", true);
+
+
+
+
+
+
+
+
                 }
             }
             
