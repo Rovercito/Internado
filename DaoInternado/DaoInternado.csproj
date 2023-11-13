@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Implementation\BaseImpl.cs" />
     <Compile Include="Implementation\DoctorImpl.cs" />
+    <Compile Include="Implementation\GraphicsImpl.cs" />
     <Compile Include="Implementation\HospitalImpl.cs" />
     <Compile Include="Implementation\PersonImpl.cs" />
     <Compile Include="Implementation\ReportImpl.cs" />

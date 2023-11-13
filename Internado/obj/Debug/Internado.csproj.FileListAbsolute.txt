@@ -936,3 +936,5 @@ C:\Users\Acer\Documents\Interna2\Internado\bin\System.IO.Packaging.xml
 C:\Users\Acer\Documents\Interna2\Internado\bin\System.Memory.xml
 C:\Users\Acer\Documents\Interna2\Internado\bin\System.Numerics.Vectors.xml
 C:\Users\Acer\Documents\Interna2\Internado\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Acer\Documents\Interna2\Internado\bin\Newtonsoft.Json.dll
+C:\Users\Acer\Documents\Interna2\Internado\bin\Newtonsoft.Json.xml
