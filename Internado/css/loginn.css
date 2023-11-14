@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 750px; /* Ajusta el ancho total */
+  height: 550px;
+  padding: 0; /* Sin relleno */
+  margin-top: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0);
+  box-shadow: 0 15px 25px rgba(0, 0, 0);
+  border-radius: 10px;
+  display: flex; /* Usar flexbox para alinear contenido */
+}
+
+.login-box2 {
+  position: absolute;
+  top: 42%;
+  left: 72%;
+  width: 380px; /* Ajusta el ancho total */
+  height: 470px;
+  margin-top: 40px;
+  transform: translate(-50%, -50%);
+  background: #990040;
+  box-shadow: 0 15px 25px rgba(0, 0, 0);
+  border-radius: 10px;
+  display: flex;
+}
+
+
+.left-side {
+  flex: 2;
+  background: #990040; /* Color del lado izquierdo */
+  border-radius: 10px 0 0 10px; /* Ajusta los bordes del lado izquierdo */
+}
+
+.right-side {
+  flex: 2;
+  padding: 40px; /* Ajusta el relleno del lado derecho según sea necesario */
+  background: white; /* Fondo blanco del lado derecho */
+  border-radius: 0 10px 10px 0; /* Ajusta los bordes del lado derecho */
+}
+
+.login-box2 h2 {
+  margin-left: 70px;
+  margin-top: 150px;
+  padding: 0;
+  color: white; /* Cambia el color del título */
+  text-align: center;
+}
+
+.user-box {
+  position: relative;
+}
+.logo{
+  margin-top: 120px;
+  margin-left: 20px;
+}
+
+.formLogin{
+  margin-top: 210px;
+  margin-left: -220px;
+  width: 280px;
+}
+.btnLoginn{
+  background:white; 
+  color:#990040;
+  margin-left: auto;
+}
+.btnLoginn:hover{
+  background: #990040; 
+  color:white;
+  margin: auto;
+}

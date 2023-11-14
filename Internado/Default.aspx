@@ -11,7 +11,6 @@
     
     <div class="row">
         <div class="chart-container col-md-4">
-            <form><asp:DropDownList ID="cbxHospital" runat="server" CssClass="form-control"></asp:DropDownList></form>
             <canvas id="myChart" width="400" height="400"></canvas>
         </div>
         <div class="chart-container col-md-4">
