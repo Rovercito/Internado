@@ -3,7 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <h1>Eliminar Doctor</h1>
-  
+
+ 
      <div class="row">
          <div class="col-md-4">
              <div class="form-group">
@@ -19,7 +20,7 @@
                  <asp:Label ID="lblSecondLastNameValue" runat="server" CssClass="form-control"></asp:Label>
              </div>
              <div class="form-group">
-                 <asp:Label ID="lblPhone"  runat="server">Teléfono</asp:Label>
+                 <asp:Label ID="lblPhone" runat="server">Teléfono</asp:Label>
                  <asp:Label ID="lblPhoneValue" runat="server" CssClass="form-control"></asp:Label>
              </div>
              <div class="form-group">

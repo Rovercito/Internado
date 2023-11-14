@@ -38,26 +38,24 @@ namespace Internado.Hospital
 
         private void ShowHospital()
         {
-            if (!IsPostBack)
+            hospitalIMPL = new HospitalImpl();
+            try
             {
-                hospitalIMPL = new HospitalImpl();
-                try
-                {
-                    ddlFilterHospital.DataSource = hospitalIMPL.LoadComboBoxHospital();
-                    ddlFilterHospital.DataTextField = "name";
-                    ddlFilterHospital.DataValueField = "idHospital";
-                    ddlFilterHospital.DataBind();
-                }
-                catch (Exception ex)
-                {
+                ddlFilterHospital.DataSource = hospitalIMPL.LoadComboBoxHospital();
+               
+                ddlFilterHospital.DataTextField = "name";
+                ddlFilterHospital.DataValueField = "idHospital";
 
-                    throw ex;
-                }
+               
+                
+                ddlFilterHospital.DataBind();
             }
-           
-        }
+            catch (Exception ex)
+            {
 
-        
+                throw ex;
+            }
+        }
 
         private void ShowReport()
         {
@@ -98,28 +96,35 @@ namespace Internado.Hospital
         {
             try
             {
-                hospitalIMPL = new HospitalImpl();
-                DataTable dt = hospitalIMPL.GetReportHospital(id);
-                DataTable table = new DataTable("Hospital");
-                table.Columns.Add("Hospital", typeof(string));
-                table.Columns.Add("Direccion", typeof(string));
-                table.Columns.Add("Telefono", typeof(string));
-                table.Columns.Add("Correo Electronico", typeof(string));
-                table.Columns.Add("Doctor Cabezera", typeof(string));
-                table.Columns.Add("Total Estudiantes", typeof(int));
-
-                foreach (DataRow dr in dt.Rows)
+                try
                 {
-                    table.Rows.Add(dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
+                    hospitalIMPL = new HospitalImpl();
+                    DataTable dt = hospitalIMPL.GetReportHospital(id);
+                    DataTable table = new DataTable("ReportHospital");
+                    table.Columns.Add("Hospital", typeof(string));
+                    table.Columns.Add("Direccion", typeof(string));
+                    table.Columns.Add("Telefono", typeof(string));
+                    table.Columns.Add("Correo Electronico", typeof(string));
+                    table.Columns.Add("Doctor Cabezera", typeof(string));
+                    table.Columns.Add("Total Estudiantes", typeof(int));
+
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        table.Rows.Add(dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
+                    }
+                    gvReportHospital.DataSource = table;
+                    gvReportHospital.DataBind();
                 }
-                gvReportHospital.DataSource = table;
-                gvReportHospital.DataBind();
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
         void exportReportToPDF()

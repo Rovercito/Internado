@@ -9,9 +9,7 @@
 
     <div class="row">
         <div class="col-md-2">
-            <asp:Button runat="server" ID="btnCrearHospital" Text="Nuevo Hospital" CssClass="btn btn-success" OnClick="btnCrearHospital_Click" >
-                
-            </asp:Button>
+            <asp:Button runat="server" ID="btnCrearHospital" Text="Nuevo Hospital" CssClass="btn btn-info" OnClick="btnCrearHospital_Click"/>
         </div>
         <div class="col-md-2">
             <asp:Button runat="server" ID="BtnReporte" Text="Reporte" CssClass="btn btn-warning" OnClick="BtnReporte_Click"/>
@@ -25,7 +23,7 @@
     <a class="btn btn-sm btn-warning" style="font-size:x-large;  text-align: left" href="/Hospital/ReportHospital.aspx">Reporte</a>
     </p>--%>
 
-<asp:GridView ID="GridDataHospital" runat="server" CssClass="table" HeaderStyle-BackColor="#b5b5b5" BackColor="#dcdbdc" DataKeyName="ID">
+<asp:GridView ID="GridDataHospital" runat="server" CssClass="table" class="table table-dark" DataKeyName="ID">
    <%-- <Columns>
         <asp:TemplateField HeaderText="Opciones">
             <ItemTemplate>

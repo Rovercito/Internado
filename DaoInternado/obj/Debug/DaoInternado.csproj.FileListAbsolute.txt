@@ -82,9 +82,3 @@ C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.Asse
 C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.dll
 C:\Users\Acer\Documents\Interna2\DaoInternado\obj\Debug\DaoInternado.pdb
-D:\Proyecto de Sistemas I\InternadoFINAL\Interna2\DaoInternado\bin\Debug\DaoInternado.dll
-D:\Proyecto de Sistemas I\InternadoFINAL\Interna2\DaoInternado\bin\Debug\DaoInternado.pdb
-D:\Proyecto de Sistemas I\InternadoFINAL\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
-D:\Proyecto de Sistemas I\InternadoFINAL\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
-D:\Proyecto de Sistemas I\InternadoFINAL\Interna2\DaoInternado\obj\Debug\DaoInternado.dll
-D:\Proyecto de Sistemas I\InternadoFINAL\Interna2\DaoInternado\obj\Debug\DaoInternado.pdb

@@ -22,12 +22,11 @@ namespace Internado
             switch (selectedMenu)
             {
                 case "ChangePassword":
-                    Response.Redirect("/OptionsFromMenu/ChangePassword.aspx");
-
+                    Response.Redirect("#");
                     break;
 
                 case "FinishSession":
-                    Response.Redirect("./Hospital/Login.aspx");
+                    Response.Redirect("Login.aspx");
                     break;
             }
         }

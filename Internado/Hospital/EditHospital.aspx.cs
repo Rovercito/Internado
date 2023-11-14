@@ -104,8 +104,17 @@ namespace Internado.Hospital
 
                         if (n > 0)
                         {
+                            ScriptManager.RegisterStartupScript(this, GetType(), "success", @"Swal.fire({
+                                                                                                  icon: 'error',
+                                                                                                  title: 'Los Campos No Deben Contener Errores!',
+                                                                                                  showConfirmButton: false,
+                                                                                                  timer: 1500
+                                                                                                  
+                                                                                                })", true);
                             Response.Redirect("/Hospital/IndexHospital.aspx");
                         }
+
+                        
                     }
                     catch (Exception)
                     {

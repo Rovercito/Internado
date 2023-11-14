@@ -28,7 +28,7 @@
                     <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" placeholder="Contraseña" required="" CssClass="form-control" />
                 </div>
                 <asp:Button ID="btnLoginn" runat="server" Text="Ingresar" OnClick="btnLoginn_Click" CssClass="form-control" style="background:white; color:#990040;" />
-                <p class="message">¿Olvido contraseña <a href="/OptionsFromMenu/ForgetPassword.aspx" class="link">Olvido</a></p>
+                <p class="message">¿Olvido contraseña <a href="ForgetPassword.aspx" class="link">Olvido</a></p>
                 <asp:Label Text="" ID="lblInfo" runat="server" CssClass="text-danger" />
             </form>
 

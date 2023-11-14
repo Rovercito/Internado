@@ -59,7 +59,7 @@
             </div>
         </div>
         
-        <asp:GridView ID="GridData" runat="server" CssClass="table" HeaderStyle-BackColor="#b5b5b5" BackColor="#dcdbdc">
+        <asp:GridView ID="GridData" runat="server" CssClass="table">
    
         </asp:GridView>
     </form>
