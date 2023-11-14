@@ -38,22 +38,22 @@ namespace Internado.Hospital
 
         private void ShowHospital()
         {
-            hospitalIMPL = new HospitalImpl();
-            try
+            if (!IsPostBack)
             {
-                ddlFilterHospital.DataSource = hospitalIMPL.LoadComboBoxHospital();
-               
-                ddlFilterHospital.DataTextField = "name";
-                ddlFilterHospital.DataValueField = "idHospital";
+                hospitalIMPL = new HospitalImpl();
+                try
+                {
+                    ddlFilterHospital.DataSource = hospitalIMPL.LoadComboBoxHospital();
+                    ddlFilterHospital.DataTextField = "name";
+                    ddlFilterHospital.DataValueField = "idHospital";
+                    ddlFilterHospital.DataBind();
+                }
+                catch (Exception ex)
+                {
 
-               
-                
-                ddlFilterHospital.DataBind();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
+                    throw ex;
+                 
+                }
             }
         }
 
@@ -65,7 +65,7 @@ namespace Internado.Hospital
                 {
                     hospitalIMPL = new HospitalImpl();
                     DataTable dt = hospitalIMPL.SelectReport();
-                    DataTable table = new DataTable("ReportHospital");
+                    DataTable table = new DataTable("Hospital");
                     table.Columns.Add("Hospital", typeof(string));
                     table.Columns.Add("Direccion", typeof(string));
                     table.Columns.Add("Telefono", typeof(string));
@@ -100,7 +100,7 @@ namespace Internado.Hospital
                 {
                     hospitalIMPL = new HospitalImpl();
                     DataTable dt = hospitalIMPL.GetReportHospital(id);
-                    DataTable table = new DataTable("ReportHospital");
+                    DataTable table = new DataTable("Hospital");
                     table.Columns.Add("Hospital", typeof(string));
                     table.Columns.Add("Direccion", typeof(string));
                     table.Columns.Add("Telefono", typeof(string));

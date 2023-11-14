@@ -56,7 +56,7 @@ namespace DaoInternado.Implementation
                             H.description AS Direccion,
                             H.phone AS Telefono,
                             H.email AS 'Correo Electronico',
-                            P.name AS 'Doctor Cabezera',
+                            ISNULL(P.name, 'Sin Doctor') AS 'Doctor Cabezera',
                             ISNULL(COUNT(S.idStudent), 0) AS 'Total de Estudiantes Asignados'
                         FROM Hospital H
                         INNER JOIN Doctor D ON D.idHospital = H.idHospital

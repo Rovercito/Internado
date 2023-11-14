@@ -64,7 +64,7 @@ namespace Internado.Hospital
                 {
                     string id = dt.Rows[i][0].ToString();
                     string up = " <a class='btn btn-sm btn-warning' style='width:75px; height:30px;' href='/Hospital/EditHospital.aspx?id=" + id + "&type=U'> <i class='fas fa-edit' style='color:#000000;'> </i> Editar  </a> ";
-                    string del = " <a class='btn btn-sm btn-danger' style='width:75px; height:30px;' href='/Hospital/IndexHospital.aspx?id=" + id + "&type=D'> <i class='fas fa-trash' style='background:#FF0000;'> </i> Eliminarook </a>  ";
+                    string del = " <a class='btn btn-sm btn-danger' style='width:75px; height:30px;' href='/Hospital/DeleteHospital.aspx?id=" + id + "&type=D'> <i class='fas fa-trash' style='background:#FF0000;'> </i> Eliminar </a>  ";
 
                     GridDataHospital.Rows[i].Cells[6].Text = up;
                     GridDataHospital.Rows[i].Cells[7].Text = del;

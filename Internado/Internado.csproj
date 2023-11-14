@@ -165,6 +165,7 @@
     <Content Include="Doctor\WebDoctor.aspx" />
     <Content Include="ForgetPassword.aspx" />
     <Content Include="Hospital\CreateHospital.aspx" />
+    <Content Include="Hospital\DeleteHospital.aspx" />
     <Content Include="Hospital\EditHospital.aspx" />
     <Content Include="Hospital\IndexHospital.aspx" />
     <Content Include="Hospital\ReportHospital.aspx" />
@@ -282,6 +283,13 @@
     </Compile>
     <Compile Include="Hospital\CreateHospital.aspx.designer.cs">
       <DependentUpon>CreateHospital.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\DeleteHospital.aspx.cs">
+      <DependentUpon>DeleteHospital.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hospital\DeleteHospital.aspx.designer.cs">
+      <DependentUpon>DeleteHospital.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hospital\EditHospital.aspx.cs">
       <DependentUpon>EditHospital.aspx</DependentUpon>

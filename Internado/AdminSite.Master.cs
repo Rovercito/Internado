@@ -23,10 +23,13 @@ namespace Internado
             {
                 case "ChangePassword":
                     Response.Redirect("#");
+                    Response.Redirect("/ChangePassword.aspx");
+
                     break;
 
                 case "FinishSession":
                     Response.Redirect("Login.aspx");
+                    Response.Redirect("./Hospital/Login.aspx");
                     break;
             }
         }
