@@ -10,6 +10,7 @@
      <asp:Button runat="server" ID="btnCrearDoctor" Text="Nuevo Doctor" CssClass="btn btn-info" OnClick="btnCrearDoctor_Click"/>
     <asp:Button runat="server" ID="BtnReporteDoctor" Text="Reporte" CssClass="btn btn-warning" OnClick="BtnReporteDoctor_Click"/>
     <br />
+    <br />
      <asp:GridView ID="gbDatos" runat="server" CssClass="table"> </asp:GridView>
 
 </asp:Content>

@@ -8,9 +8,6 @@
     </center>
 
     <div class="row">
-        <%--<div class="col-md-2">
-           <asp:Label runat="server" Text="Hospital" />
-        </div> --%>
         <div class="col-md-2">
             <asp:DropDownList runat="server" ID="ddlFilterHospital" AppendDataBoundItems="false" AutoPostBack="true"  CssClass="form-control" OnSelectedIndexChanged="ddlFilterHospital_SelectedIndexChanged">
                     <asp:ListItem Text="Filtrar Hospitales" Value="0" />
@@ -21,6 +18,7 @@
         </div>
     </div>
     
+    <br />
     
     <div>
         <asp:GridView runat="server" ID="gvReportHospital" CssClass="table" HeaderStyle-BackColor="#b5b5b5" BackColor="#dcdbdc" DataKeyName="ID"></asp:GridView>

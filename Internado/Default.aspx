@@ -26,7 +26,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 
-                var data = <%= CargarDatosGrafico() %>;
+                var data = <%= CargarDatosPorEstados() %>;
 
                 var config = {
                     type: 'doughnut',
@@ -40,7 +40,7 @@
                             title: {
                                 display: true,
                                 size: 50,
-                                text: 'Filtro Doctor'
+                                text: 'Estados Tareas'
                             }
                         },
                         cutout: 50,

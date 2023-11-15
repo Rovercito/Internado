@@ -80,5 +80,106 @@ namespace DaoInternado.Implementation
 
             return cantidadDoctores;
         }
+        
+
+        //Obtener tareas por estados
+        public int ObtenerTareasPendiente()
+        {
+            int cantidad = 0;
+            query = @"SELECT COUNT(statusTask)
+                      FROM TaskStudent
+                      WHERE statusTask = 'Pendiente'";
+
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                command.Connection.Open();
+                cantidad = Convert.ToInt32(command.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+            return cantidad;
+        }
+        public int ObtenerTareasAceptada()
+        {
+            int cantidad = 0;
+            query = @"SELECT COUNT(statusTask)
+                      FROM TaskStudent
+                      WHERE statusTask = 'Aceptada'";
+
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                command.Connection.Open();
+                cantidad = Convert.ToInt32(command.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+            return cantidad;
+        }
+
+        public int ObtenerTareasTerminada()
+        {
+            int cantidad = 0;
+            query = @"SELECT COUNT(statusTask)
+                      FROM TaskStudent
+                      WHERE statusTask = 'Terminada'";
+
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                command.Connection.Open();
+                cantidad = Convert.ToInt32(command.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+            return cantidad;
+        }
+
+        public int ObtenerTareasRechazada()
+        {
+            int cantidad = 0;
+            query = @"SELECT COUNT(statusTask)
+                      FROM TaskStudent
+                      WHERE statusTask = 'Rechazada'";
+
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                command.Connection.Open();
+                cantidad = Convert.ToInt32(command.ExecuteScalar());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+            return cantidad;
+        }
     }
 }

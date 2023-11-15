@@ -42,7 +42,7 @@
 
 
          <div class="form-group">
-               <asp:Button ID="btnCreate" OnClick="btnCreate_Click" runat="server" Text="Eliminar" CssClass="btn btn-success" />
+               <asp:Button ID="btnCreate" OnClick="btnCreate_Click" runat="server" Text="Registrar" CssClass="btn btn-success" />
           
              
          </div>

@@ -1,5 +1,6 @@
 ﻿using DaoInternado.Implementation;
 using DaoInternado.Model;
+using Org.BouncyCastle.Crypto.Tls;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -218,10 +219,22 @@ namespace Internado.Students
             string fechaInicioString = TxbStarDate.Text;
             string fechaFinString = TxbEndDate.Text;
 
-            DateTime fechaInicio = DateTime.Parse(fechaInicioString);
-            DateTime fechaFin = DateTime.Parse(fechaFinString);
+            if(fechaInicioString == "" && fechaFinString == "")
+            {
+                Select();
+            }
+            else
+            {
 
-            filterByDate(fechaInicio, fechaFin);
+                DateTime fechaInicio = DateTime.Parse(fechaInicioString);
+                DateTime fechaFin = DateTime.Parse(fechaFinString);
+                filterByDate(fechaInicio, fechaFin);
+            }
+
+            //DateTime fechaInicio = DateTime.Parse(fechaInicioString);
+            //DateTime fechaFin = DateTime.Parse(fechaFinString);
+
+            //filterByDate(fechaInicio, fechaFin);
 
         }
     }

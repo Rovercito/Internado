@@ -70,7 +70,7 @@ namespace Internado.Students
                         txtSecondLastName.Text = S.SecondLastName.ToString();
                         txtPhone.Text = S.Phone.ToString();
                         txtEmail.Text = S.Email.ToString();
-                        txtSpeciality.Text = S.Email.ToString();
+                        txtSpeciality.Text = S.Speciality.ToString();   //S.Email.ToString();
                         ddlDoctor.SelectedValue = S.DoctorID.ToString();
                         ddlHospital.SelectedValue = S.HospitalID.ToString();
                     }

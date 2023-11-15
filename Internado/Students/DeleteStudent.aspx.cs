@@ -47,13 +47,15 @@ namespace Internado.Students
             if (S != null)
             {
                 lblNameValue.Text= S.Name.ToString();
-                lblLastName.Text = S.LastName.ToString();
-                lblSecondLastName.Text = S.SecondLastName.ToString();
-                lblPhone.Text = S.Phone.ToString();
-                lblEmail.Text = S.Email.ToString();
-                lblSpeciality.Text = S.Email.ToString();
+                lblLastNameValue .Text = S.LastName.ToString();
+                lblSecondLastNameValue.Text = S.SecondLastName.ToString();
+                lblPhoneValue.Text = S.Phone.ToString();
+                lblEmailValue.Text = S.Email.ToString();
+                lblSpecialityValue.Text = S.Speciality.ToString();
                 ddlDoctor.SelectedValue = S.DoctorID.ToString();
                 ddlHospital.SelectedValue = S.HospitalID.ToString();
+
+                //string nombreDoctor = ObtenerNombreDoctorId(S.DoctorID);
             }
         }
 
@@ -74,5 +76,11 @@ namespace Internado.Students
                 }
             }
         }
+
+
+        //private string ObtenerNombreDoctorId(int id)
+        //{
+
+        //}
     }
 }

@@ -6,7 +6,7 @@
     <center>
         <h1>Lista Hospital</h1>
     </center>
-
+    
     <div class="row">
         <div class="col-md-2">
             <asp:Button runat="server" ID="btnCrearHospital" Text="Nuevo Hospital" CssClass="btn btn-info" OnClick="btnCrearHospital_Click"/>
@@ -15,7 +15,7 @@
             <asp:Button runat="server" ID="BtnReporte" Text="Reporte" CssClass="btn btn-warning" OnClick="BtnReporte_Click"/>
         </div>
     </div>
-
+<br />
   <%--  <p>
         <a class="nav-link text-dark" style="font-size:x-large;  text-align: left" href="/Hospital/CreateHospital.aspx">Registrar Nuevo Hospital</a>
     </p>

@@ -37,7 +37,7 @@
                     <div class="justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Students/WebStudent.aspx">Administrar <br /> Interinos</a>
+                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Students/WebStudent.aspx">Administrar <br /> Internos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Doctor/WebDoctor.aspx">Administrar <br /> Medicos</a>

@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Eliminar Interino</h1>
+    <h1>Eliminar Interno</h1>
 
-<h4>Student</h4>
+<%--<h4>Student</h4>--%>
 <hr />
 <div class="row">
     <div class="col-md-4">

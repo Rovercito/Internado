@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Management;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
@@ -38,7 +39,32 @@ namespace Internado
             }
         }
 
+        public string CargarDatosPorEstados()
+        {
+            graphicsImpl = new GraphicsImpl();
 
+            int asignados = graphicsImpl.ObtenerTareasPendiente();
+            int aceptados = graphicsImpl.ObtenerTareasAceptada();
+            int terminado = graphicsImpl.ObtenerTareasTerminada();
+            int rechazado = graphicsImpl.ObtenerTareasRechazada();
+
+            var data = new
+            {
+                labels = new[] { "Asignados", "Aceptados", "Terminados", "Rechazados" },
+                datasets = new[]
+                    {
+                        new
+                        {
+                            data = new[] { asignados, aceptados, terminado, rechazado },
+                            backgroundColor = new[] { "rgba(255, 206, 86, 0.5)", "rgba(75, 192, 192, 0.5)", "rgba(54, 162, 235, 0.5)", "rgba(255, 99, 132, 0.5)" },
+                            borderColor = new[] { "rgba(255, 206, 86, 1)", "rgba(54, 162, 235, 1)", "rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)" },
+                            borderWidth = 1
+                        }
+                }
+            };
+
+            return Newtonsoft.Json.JsonConvert.SerializeObject(data);
+        }
 
         public string CargarDatosGrafico()
         {
@@ -63,7 +89,6 @@ namespace Internado
             }
             };
 
-            // Serializa el objeto a una cadena JSON y lo retorna
             return Newtonsoft.Json.JsonConvert.SerializeObject(data);
         }
 
@@ -74,7 +99,6 @@ namespace Internado
 
             int cantidadDoctores = graphicsImpl.ObtenerCantidadDoctores();
             int cantidadInternos = graphicsImpl.ObtenerCantidadEstudiantes();
-            //int cantidadHospital = graphicsImpl.ObtenerCantidadHospital();
 
             var data = new
             {

@@ -2,14 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Create Student</h1>
+    <h1>Registrar Interno</h1>
 
-<h4>Student</h4>
+<%--<h4>Student</h4>--%>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <div class="form-group">
-            <asp:Label ID="lblName" runat="server" AssociatedControlID="txtName">Nombre del Estudiante</asp:Label>
+            <asp:Label ID="lblName" runat="server" AssociatedControlID="txtName">Nombre del Interno</asp:Label>
             <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
         <div class="form-group">
@@ -41,8 +41,9 @@
             <asp:DropDownList ID="ddlHospital" runat="server" CssClass="form-control"></asp:DropDownList>
         </div>
         <div class="form-group">
-            <asp:Button ID="btnEdit" runat="server" Text="Editar" CssClass="btn btn-primary" OnClick="btnEdit_Click" />
+            <asp:Button ID="btnEdit" runat="server" Text="Editar" CssClass="btn btn-warning" OnClick="btnEdit_Click" />
         </div>
+        <br />
     </div>
 </div>
 </asp:Content>

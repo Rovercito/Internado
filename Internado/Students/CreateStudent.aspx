@@ -3,9 +3,9 @@
     <title>Create Student</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Create Student</h1>
+    <h1>Registrar Interno</h1>
 
-    <h4>Student</h4>
+    <%--<h4>Nuevo Interno</h4>--%>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -52,9 +52,10 @@
                 <asp:DropDownList ID="ddlHospital" runat="server" CssClass="form-control"></asp:DropDownList>
             </div>
             <div class="form-group">
-                <asp:Button ID="btnCreate" runat="server" Text="Crear" CssClass="btn btn-primary" OnClick="btnCreate_Click" />
+                <asp:Button ID="btnCreate" runat="server" Text="Registrar" CssClass="btn btn-success" OnClick="btnCreate_Click" />
                 <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red"></asp:Label>
             </div>
+            <br />
         </div>
     </div>
 </asp:Content>
