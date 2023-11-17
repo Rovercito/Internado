@@ -245,8 +245,9 @@ namespace DaoInternado.Implementation
                         FROM taskStudent AS ts
                         INNER JOIN Person AS d ON ts.idDoctor = d.idPerson
                         INNER JOIN Person AS s ON ts.idStudent = s.idPerson
-                        
+                                    
                         ORDER BY 2";
+
             SqlCommand command = CreateBasicCommand(query);
             //command.Parameters.AddWithValue("@id", id);
 
@@ -450,6 +451,28 @@ namespace DaoInternado.Implementation
                 throw ex;
             }
 
+        }
+
+        public DataTable searchByName(string name)
+        {
+            query = @"SELECT ts.idTaskStudent, ts.description AS Descripcion, ts.date AS Fecha, ts.expireDate AS 'Fecha de Expiracion', ts.image AS Imagen, ts.fileStudent AS Archivo,
+                        ts.statusTask AS 'Estado Tarea', d.name AS 'Doctor Asignado', s.name AS 'Estudiante Asignado'
+                        FROM taskStudent AS ts
+                        INNER JOIN Person AS d ON ts.idDoctor = d.idPerson
+                        INNER JOIN Person AS s ON ts.idStudent = s.idPerson
+                        WHERE s.name LIKE '%' + @name + '%'
+                        ORDER BY 2;";
+
+            SqlCommand commnad = CreateBasicCommand(query);
+            commnad.Parameters.AddWithValue("@name", name);
+
+            try
+            {
+                return ExecuteDataTableCommand(commnad);
+            }catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

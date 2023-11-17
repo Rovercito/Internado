@@ -460,7 +460,7 @@ namespace Internado.Reporte
             if (ddlDescargarPdf.SelectedItem.Text == "Descarga General")
             {
                 exportReportToPDF();
-                ddlDescargarPdf.SelectedValue = "Descargar Pdf";
+                
             }
             else
             {
@@ -473,6 +473,7 @@ namespace Internado.Reporte
             if(ddlDescargarExcel.SelectedItem.Text == "Descarga General")
             {
                 exportReportToExcel();
+                
             }
             else
             {
