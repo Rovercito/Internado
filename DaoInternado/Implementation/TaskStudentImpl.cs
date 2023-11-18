@@ -169,7 +169,7 @@ namespace DaoInternado.Implementation
                         FROM taskStudent AS ts
                         INNER JOIN Person AS d ON ts.idDoctor = d.idPerson
                         INNER JOIN Person AS s ON ts.idStudent = s.idPerson
-                        WHERE ts.idStudent=@id AND ts.statusTask !='Rechazada'
+                        WHERE ts.idStudent=@id AND ts.statusTask !='Rechazada' AND ts.statusTask !='Terminada'
                         ORDER BY 2";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", id);

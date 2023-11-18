@@ -65,7 +65,9 @@ namespace Internado.StudentPage
                         string descripcion = dr["Descripcion"].ToString();
                         string fecha = dr["Fecha"].ToString();
                         string fechaExpiracion = dr["Fecha de Expiracion"].ToString();
-                        string imagen = dr["Imagen"] != DBNull.Value ? "data:image;base64," + Convert.ToBase64String((byte[])dr["Imagen"]) : "";
+                        string imagen = dr["Imagen"] != DBNull.Value? "data:image;base64," + Convert.ToBase64String((byte[])dr["Imagen"]): "/Images/logo.png";
+
+                        //string imagen = dr["Imagen"] != DBNull.Value ? "data:image;base64," + Convert.ToBase64String((byte[])dr["Imagen"]) : "";
                         string archivo = dr["Archivo"] != DBNull.Value ? "data:application/pdf;base64," + Convert.ToBase64String((byte[])dr["Archivo"]) : "";
                         string estadoTarea = dr["Estado Tarea"].ToString();
                         string doctorAsignado = dr["Doctor Asignado"].ToString();

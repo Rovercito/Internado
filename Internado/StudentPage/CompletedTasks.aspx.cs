@@ -58,8 +58,8 @@ namespace Internado.StudentPage
                     tableHtml.Append("<th>Estado Tarea</th>");
                     tableHtml.Append("<th>Doctor Asignado</th>");
                     tableHtml.Append("<th>Estudiante Asignado</th>");
-                    tableHtml.Append("<th>Ver</th>");
-                    tableHtml.Append("<th>Rechazar</th>");
+                    //tableHtml.Append("<th>Ver</th>");
+                    //tableHtml.Append("<th>Rechazar</th>");
                     tableHtml.Append("</tr>");
 
                     foreach (DataRow dr in dt.Rows)
@@ -83,8 +83,8 @@ namespace Internado.StudentPage
                         tableHtml.Append($"<td>{estadoTarea}</td>");
                         tableHtml.Append($"<td>{doctorAsignado}</td>");
                         tableHtml.Append($"<td>{estudianteAsignado}</td>");
-                        tableHtml.Append($"<td><a class='btn btn-sm btn-success' href='TaskDetails.aspx?id={id}&type=U'><i class='fas fa-edit' style='color:#000000;'></i>Ver</a></td>");
-                        tableHtml.Append($"<td><a class='btn btn-sm btn-danger' href='TaskDetails.aspx?id={id}&type=D'><i class='fas fa-trash' style='background:#FF0000;'></i>Rechazar</a></td>");
+                        //tableHtml.Append($"<td><a class='btn btn-sm btn-success' href='TaskDetails.aspx?id={id}&type=U'><i class='fas fa-edit' style='color:#000000;'></i>Ver</a></td>");
+                        //tableHtml.Append($"<td><a class='btn btn-sm btn-danger' href='TaskDetails.aspx?id={id}&type=D'><i class='fas fa-trash' style='background:#FF0000;'></i>Rechazar</a></td>");
                         tableHtml.Append("</tr>");
                     }
                     tableHtml.Append("</table>");
