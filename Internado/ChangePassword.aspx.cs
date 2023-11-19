@@ -18,11 +18,11 @@ namespace Internado
         {
             if (Session["users"] == null)
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("../Login.aspx");
             }
             if (Session["users"] != null && Session["role"].ToString() != "Administrador")
             {
-                Response.Redirect("Logout.aspx");
+                Response.Redirect("../Logout.aspx");
             }
            
         }

@@ -27,11 +27,11 @@ namespace Internado.Students
             }
             if (Session["users"] == null)
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~Login.aspx");
             }
             if (Session["users"] != null && Session["role"].ToString() != "Administrador")
             {
-                Response.Redirect("~/Logout.aspx");
+                Response.Redirect("~Logout.aspx");
             }
 
         }
@@ -67,7 +67,8 @@ namespace Internado.Students
 
                 if (n > 0 && m > 0)
                 {
-                    Response.Redirect("/Students/WebStudent.aspx");
+                    Response.Redirect("../Students/WebStudent.aspx");
+
                 }
                 /*}
                 catch (Exception ex)

@@ -76,17 +76,17 @@ namespace Internado
 
         protected void btnCrearInterno_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Students/CreateStudent.aspx");
+            Response.Redirect("../Students/CreateStudent.aspx");
         }
 
         protected void btnVerTareaInterno_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Students/ViewStatusStudent.aspx");
+            Response.Redirect("../Students/ViewStatusStudent.aspx");
         }
 
         protected void btnReporteInterno_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Reporte/ReportStudent.aspx");
+            Response.Redirect("../Reporte/ReportStudent.aspx");
         }
     }
 }

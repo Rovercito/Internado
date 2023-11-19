@@ -14,24 +14,6 @@ namespace Internado
             lblUsername.Text = (Session["users"].ToString());
         }
 
-        protected void ddlUserMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DropDownList ddl = (DropDownList)sender;
-            string selectedMenu = ddl.SelectedValue;
-
-            switch (selectedMenu)
-            {
-                case "ChangePassword":
-                    Response.Redirect("#");
-                    Response.Redirect("/ChangePassword.aspx");
-
-                    break;
-
-                case "FinishSession":
-                    Response.Redirect("Login.aspx");
-                    Response.Redirect("./Hospital/Login.aspx");
-                    break;
-            }
-        }
+       
     }
 }

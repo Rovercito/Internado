@@ -29,11 +29,11 @@
 
         <div class="form-group">
             <asp:Label ID="lblPhone" runat="server" AssociatedControlID="txtPhone">Teléfono</asp:Label>
-            <asp:TextBox ID="txtPhone"   runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtPhone"  runat="server" CssClass="form-control"></asp:TextBox>
         </div>
         <div class="form-group">
             <asp:Label ID="lblEmail" runat="server" AssociatedControlID="txtEmail">Email</asp:Label>
-            <asp:TextBox ID="txtEmail"  runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtEmail"   runat="server" CssClass="form-control"></asp:TextBox>
         </div>
         <div class="form-group">
             <asp:Label ID="lblDescription" runat="server" AssociatedControlID="txtDescription">Descripcion</asp:Label>
@@ -46,6 +46,7 @@
           
              
          </div>
+        <asp:Label Text=""  ID="lblInfo" runat="server" CssClass="text-danger" />
     </div>
      <div class="col-md-8">
        <div id="map" style="width: 100%; height: 400px;"></div>

@@ -37,13 +37,13 @@
                     <div class="justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Students/WebStudent.aspx">Administrar <br /> Internos</a>
+                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="../Students/WebStudent.aspx">Administrar <br /> Internos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Doctor/WebDoctor.aspx">Administrar <br /> Medicos</a>
+                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="../Doctor/WebDoctor.aspx">Administrar <br /> Medicos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="/Hospital/IndexHospital.aspx">Administrar <br /> Hospitales</a>
+                                <a class="nav-link text-white" style="font-size:x-large; text-align: center" href="../Hospital/IndexHospital.aspx">Administrar <br /> Hospitales</a>
                             </li>
                            
                         </ul>
@@ -54,11 +54,12 @@
                             <div style="display: inline-block; vertical-align: middle;">
                                 <div class="status-circle"></div>
                             </div>
-                            <select id="userMenu" class="btn btn-link  white-menu" onchange="handleMenuChange(this)" style="display: inline-block">
+                            <select id="userMenu" class="btn btn-link  white-menu"  onchange ="handleMenuChange(this)" style="display: inline-block">
                                 <option value="MenuIcon">&nbsp;☰ Menu</option>
                                 <option value="CambiarContrasena">Cambiar Contraseña</option>
                                 <option value="CerrarSesion">Cerrar Sesión</option>
                             </select>
+
                         </div>
                     </div>
                 </div>
@@ -97,18 +98,28 @@
 
     </style>
     <script>
-        function handleMenuChange(menu) {
-            var selectedValue = menu.value;
+        function handleMenuChange(selectElement) {
+            var selectedValue = selectElement.value;
+
             switch (selectedValue) {
                 case "CambiarContrasena":
-                    window.location.href = "ChangePassword.aspx";
+                    window.location.href = '<%= ResolveUrl("~/ChangePassword.aspx") %>';
+                break;
+
+            case "CerrarSesion":
+                window.location.href = '<%= ResolveUrl("~/Logout.aspx") %>';
                     break;
-                case "CerrarSesion":
-                    window.location.href = "Login.aspx";
+
+                // Otros casos según sea necesario
+
+                default:
+                    // Manejar el valor por defecto si es necesario
                     break;
             }
         }
     </script>
+
+
 
     
     <footer class="border-top footer text-muted" style="background: #990040; position: fixed; bottom: 0; width: 100%;">
