@@ -1454,3 +1454,28 @@ C:\Users\Acer\Documents\Copia Internado\Internado\Internado\obj\Debug\Internado.
 C:\Users\Acer\Documents\Copia Internado\Internado\Internado\obj\Debug\Internado.csproj.CopyComplete
 C:\Users\Acer\Documents\Copia Internado\Internado\Internado\obj\Debug\Internado.dll
 C:\Users\Acer\Documents\Copia Internado\Internado\Internado\obj\Debug\Internado.pdb
+C:\Users\juane\Source\Repos\Internado\Internado\bin\BouncyCastle.Crypto.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\ClosedXML.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\DocumentFormat.OpenXml.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\ExcelNumberFormat.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\Irony.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\itextsharp.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\Newtonsoft.Json.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\SixLabors.Fonts.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Buffers.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.IO.Packaging.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Memory.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Numerics.Vectors.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\XLParser.dll
+C:\Users\juane\Source\Repos\Internado\Internado\bin\ClosedXML.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\DocumentFormat.OpenXml.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\ExcelNumberFormat.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\itextsharp.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\Newtonsoft.Json.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\SixLabors.Fonts.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Buffers.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.IO.Packaging.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Memory.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Numerics.Vectors.xml
+C:\Users\juane\Source\Repos\Internado\Internado\bin\System.Runtime.CompilerServices.Unsafe.xml
