@@ -2,6 +2,7 @@
 using DaoInternado.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,6 +25,8 @@ namespace Internado.Students
             {
                 id = int.Parse(Request.QueryString["id"]);
                 load();
+                fillCombo1();
+                fillCombo2();
             }
             if (Session["users"] == null)
             {
@@ -56,6 +59,51 @@ namespace Internado.Students
                 ddlHospital.SelectedValue = S.HospitalID.ToString();
 
                 //string nombreDoctor = ObtenerNombreDoctorId(S.DoctorID);
+            }
+        }
+
+        void fillCombo1()
+        {
+            if (!IsPostBack)
+            {
+                try
+                {
+                    implStudent = new StudentImpl();
+                    DataTable combo = implStudent.ComboBox();
+                    implStudent = new StudentImpl();
+                    ddlDoctor.DataSource = combo;
+                    ddlDoctor.DataTextField = "name";
+                    ddlDoctor.DataValueField = "id";
+                    //Brand.DataSource = combo.DefaultView;
+                    ddlDoctor.DataBind();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+        }
+        void fillCombo2()
+        {
+            if (!IsPostBack)
+            {
+                try
+                {
+                    implStudent = new StudentImpl();
+                    DataTable combo = implStudent.ComboBox2();
+                    implStudent = new StudentImpl();
+                    ddlHospital.DataSource = combo;
+                    ddlHospital.DataTextField = "name";
+                    ddlHospital.DataValueField = "id";
+                    ddlHospital.DataBind();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
         }
 

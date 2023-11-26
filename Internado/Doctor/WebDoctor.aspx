@@ -11,7 +11,8 @@
     <asp:Button runat="server" ID="BtnReporteDoctor" Text="Reporte" CssClass="btn btn-warning" OnClick="BtnReporteDoctor_Click"/>
     <br />
     <br />
-     <asp:GridView ID="gbDatos" runat="server" CssClass="table"> </asp:GridView>
+     <%--<asp:GridView ID="gbDatos" runat="server" CssClass="table"> </asp:GridView>--%>
+    <asp:GridView ID="gbDatos" runat="server" CssClass="table" HeaderStyle-BackColor="#b5b5b5" BackColor="#dcdbdc" DataKeyName="ID"></asp:GridView>
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">

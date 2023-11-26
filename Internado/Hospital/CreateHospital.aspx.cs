@@ -17,6 +17,7 @@ namespace Internado.Hospital
         HospitalImpl implHospital;
         DaoInternado.Model.Hospital H;
         ValidationHospital validationHospital;
+       
         int id;
         #endregion
 

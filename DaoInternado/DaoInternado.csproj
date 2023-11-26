@@ -67,6 +67,7 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\ValidationDoctor.cs" />
+    <Compile Include="Tools\ValidationHospital.cs" />
     <Compile Include="Tools\ValidationStudent.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -88,7 +88,7 @@ namespace Internado.Reporte
                     string Hospital = dr["Hospital"].ToString();
                     string Estado = dr["Estado"].ToString();
                     string Descripción = dr["Descripción"].ToString();
-                    string Imagen = dr["Imagen"] != DBNull.Value ? "data:image;base64," + Convert.ToBase64String((byte[])dr["Imagen"]) : "";
+                    string Imagen = dr["Imagen"] != DBNull.Value ? "data:image;base64," + Convert.ToBase64String((byte[])dr["Imagen"]) : "/Images/logo.png";
                     string Archivo = dr["Archivo"] != DBNull.Value ? "data:application/pdf;base64," + Convert.ToBase64String((byte[])dr["Archivo"]) : "";
 
                     tableHtml.Append("<tr>");

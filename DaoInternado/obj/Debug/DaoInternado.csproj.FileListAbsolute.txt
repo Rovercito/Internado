@@ -100,3 +100,15 @@ D:\Proyecto de Sistemas I\INT\Interna2\DaoInternado\obj\Debug\DaoInternado.cspro
 D:\Proyecto de Sistemas I\INT\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
 D:\Proyecto de Sistemas I\INT\Interna2\DaoInternado\obj\Debug\DaoInternado.dll
 D:\Proyecto de Sistemas I\INT\Interna2\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\juane\Downloads\Interna2\Interna2\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\juane\Downloads\Interna2\Interna2\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\juane\Downloads\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\juane\Downloads\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\juane\Downloads\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\juane\Downloads\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.pdb

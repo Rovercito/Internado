@@ -40,7 +40,7 @@ namespace Internado.StudentPage
                 if (dt.Rows.Count <= 0)
                 {
                     StringBuilder tableHtml2 = new StringBuilder();
-                    tableHtml2.Append("<h1>No hay Tareas pendientes</h1>");
+                    tableHtml2.Append("<center><h1>No hay Tareas pendientes</h1></center>");
                     LiteralTable.Text = tableHtml2.ToString();
                 }
                 else

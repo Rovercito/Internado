@@ -32,13 +32,17 @@
                
                         </div>
                         <div class="user-profile" style="position: relative; top: 20px; right: 20px;">
-                            <div style="margin-left: 50px">
-                                <img src="/Images/user.png" alt="Imagen de perfil" width="40" height="40" />
-                            </div>
-                          
-                            <div style="margin-bottom: 30px">
-                                <asp:Label runat="server" ID="lblUsername" class="user-name" style="color: white"></asp:Label>
-                                <a class="nav-link text-white" style="font-size:x-large; font-size:18px" href="../Logout.aspx">Cerrar Sesion</a>    
+                            <div style="margin-bottom: 30px; display: inline-block">
+                                <asp:Label runat="server" ID="lblUsername" class="user-name" style="color: white; display: inline-block"></asp:Label>
+                                <div style="display: inline-block; vertical-align: middle;">
+                                    <div class="status-circle"></div>
+                                </div>
+                                <select id="userMenu" class="btn btn-link  white-menu"  onchange ="handleMenuChange(this)" style="display: inline-block">
+                                    <option value="MenuIcon">&nbsp;☰ Menu</option>
+                                    <option value="CambiarContrasena">Cambiar Contraseña</option>
+                                    <option value="CerrarSesion">Cerrar Sesión</option>
+                                </select>
+ 
                             </div>
                         </div>
                     </div>
@@ -67,6 +71,49 @@
 
             <asp:Literal ID="LiteralTable" runat="server"></asp:Literal>
         </form>
+
+        <style>
+             .white-menu {
+                 background-color: transparent;
+                 color: white; 
+             }
+ 
+             .status-circle {
+                 width: 25px;
+                 height: 25px;
+                 background-color: green;
+                 border-radius: 50%;
+                 margin-left: 7px;
+                 display: inline-block;
+                 vertical-align: middle;
+             }
+             .user-name {
+                 margin-right: 5px;
+             }
+ 
+        </style>
+        <script>
+            function handleMenuChange(selectElement) {
+                var selectedValue = selectElement.value;
+
+                switch (selectedValue) {
+                    case "CambiarContrasena":
+                        window.location.href = '<%= ResolveUrl("~/ChangePassword.aspx") %>';
+                     break;
+ 
+                 case "CerrarSesion":
+                        window.location.href = '<%= ResolveUrl("~/Logout.aspx") %>';
+                        break;
+
+                    // Otros casos según sea necesario
+
+                    default:
+                        // Manejar el valor por defecto si es necesario
+                        break;
+                }
+            }
+        </script>
+
 
         <footer class="border-top footer text-muted" style="background: #990040; position: fixed; bottom: 0; width: 100%;">
             <div class="container">
