@@ -112,3 +112,9 @@ C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInterna
 C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.dll
 C:\Users\Acer\Downloads\Int2\Interna2\Interna2\DaoInternado\obj\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\Copia Internado\Internado\DaoInternado\bin\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\Copia Internado\Internado\DaoInternado\bin\Debug\DaoInternado.pdb
+C:\Users\Acer\Documents\Copia Internado\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.AssemblyReference.cache
+C:\Users\Acer\Documents\Copia Internado\Internado\DaoInternado\obj\Debug\DaoInternado.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\Copia Internado\Internado\DaoInternado\obj\Debug\DaoInternado.dll
+C:\Users\Acer\Documents\Copia Internado\Internado\DaoInternado\obj\Debug\DaoInternado.pdb

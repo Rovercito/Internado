@@ -11,8 +11,8 @@ namespace DaoInternado.Implementation
 {
     public class BaseImpl
     {
-        string connectionString = @"workstation id=dbInternado.mssql.somee.com;packet size=4096;user id=JayLoKing_SQLLogin_1;pwd=trt8r1wjwc;data source=dbInternado.mssql.somee.com;persist security info=False;initial catalog=dbInternado;";
-        //string connectionString = "Server = LAPTOP-AOP1NU2T; Database=dbInternado;User Id = sa; Password=Rover";
+        //string connectionString = @"workstation id=dbInternado.mssql.somee.com;packet size=4096;user id=JayLoKing_SQLLogin_1;pwd=trt8r1wjwc;data source=dbInternado.mssql.somee.com;persist security info=False;initial catalog=dbInternado;";
+        string connectionString = "Server = LAPTOP-AOP1NU2T; Database=dbInternado1;User Id = sa; Password=Rover";
 
         internal string query = "";
         public SqlCommand CreateBasicCommand()
