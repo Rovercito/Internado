@@ -215,6 +215,36 @@ namespace DaoInternado.Implementation
                 throw ex;
             }
         }
+
+        public DataTable GetReportForNameHospitalREPORT()
+        {
+            query = @"SELECT
+                        H.idHospital,
+                        H.name AS Hospital,
+                        P.name AS 'Doctor Cabezera',
+                        SP.name AS 'Estudiantes Asignados'
+                        FROM Hospital H
+                        INNER JOIN Doctor D ON D.idHospital = H.idHospital
+                        LEFT JOIN Student S ON S.idHospital = H.idHospital AND S.idDoctor = D.idDoctor
+                        INNER JOIN Person P ON P.idPerson = D.idDoctor
+                        INNER JOIN Person SP ON SP.idPerson = S.idStudent
+                        WHERE H.status = 1
+                        GROUP BY
+                        H.idHospital, H.name, P.name,SP.name
+                        ORDER BY 1;";
+
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                return ExecuteDataTableCommand(command);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
 

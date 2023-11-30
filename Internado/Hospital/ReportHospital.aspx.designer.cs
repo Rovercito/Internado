@@ -33,6 +33,15 @@ namespace Internado.Hospital
         protected global::System.Web.UI.WebControls.Button btnDescargarReporte;
 
         /// <summary>
+        /// Control btnDescargarReporteDE.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDescargarReporteDE;
+
+        /// <summary>
         /// Control gvReportHospital.
         /// </summary>
         /// <remarks>

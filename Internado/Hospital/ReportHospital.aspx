@@ -8,13 +8,16 @@
     </center>
 
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-4">
             <asp:DropDownList runat="server" ID="ddlFilterHospital" AppendDataBoundItems="false" AutoPostBack="true"  CssClass="form-control" OnSelectedIndexChanged="ddlFilterHospital_SelectedIndexChanged">
                     <asp:ListItem Text="Filtrar Hospitales" Value="0" />
             </asp:DropDownList>
         </div>
         <div class="col-md-2">
              <asp:Button runat="server" ID="btnDescargarReporte" Text="Descargar Reporte" CssClass="btn btn-warning" OnClick="btnDescargarReporte_Click"/>
+        </div>
+        <div class="col-md-4">
+            <asp:Button runat="server" ID="btnDescargarReporteDE" Text="Descargar Reporte Doctor y Estudiante" CssClass="btn btn-warning" OnClick="btnDescargarReporteDE_Click" />
         </div>
     </div>
     
